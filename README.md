@@ -5,6 +5,15 @@
 ```bash
 composer require xwpd/thinkphp-testing --dev
 ```
+修改 phpunit.xml 文件,在 phpunit 标签加入 bootstrap="vendor/autoload.php" 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+         bootstrap="vendor/autoload.php"
+>
+....
+</phpunit>
+```
 ## 使用时注意
 1. 测试类必须继承 Xwpd\ThinkTesting\TestCase 测试类
 1. 如果不是使用thinkPHP命令（php think unit） 运行的测试，需要设置 $app_path 。   
