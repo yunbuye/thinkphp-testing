@@ -1,0 +1,54 @@
+{
+    "name": "xwpd/thinkphp-testing",
+    "license": "MIT",
+    "description": "ThinkPHP 友好的测试扩展",
+    "keywords": [
+        "Testing",
+        "ThinkPHP",
+        "mockery",
+        "mock"
+    ],
+    "homepage": "http://github.com/xwpd/thinkphp-testing",
+    "authors": [
+        {
+            "name": "xwpd",
+            "email": "514261300@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "fzaninotto/faker": "~1.0",
+        "topthink/framework": "5.1.*",
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^6.0",
+        "topthink/think-testing": "2.0.*"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Xwpd\\ThinkTesting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xwpd\\ThinkTesting\\Tests\\": "tests/",
+            "think\\":"vendor/topthink/framework/library/think/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "branch-alias":{
+            "dev-master":"0.x.x-dev"
+        },
+        "think": {
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    }
+}
