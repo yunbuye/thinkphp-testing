@@ -1,5 +1,5 @@
 # xwpd/thinkphp-testing 
-一个ThinkPHP友好的测试扩展
+一个测试友好的ThinkPHP测试扩展
 
 ## 安装
 ```bash
@@ -9,9 +9,11 @@ composer require xwpd/thinkphp-testing --dev
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit 
-         bootstrap="vendor/autoload.php"
+        ...
+        bootstrap="vendor/autoload.php"
+        ...
 >
-....
+...
 </phpunit>
 ```
 ## 使用时注意
