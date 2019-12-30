@@ -5,6 +5,7 @@ namespace Xwpd\ThinkTesting;
 
 use think\App;
 use think\helper\Str;
+use Xwpd\ThinkTesting\Traits\AssertJson;
 use Xwpd\ThinkTesting\Traits\DatabaseTransactions;
 use Xwpd\ThinkTesting\Traits\InteractsWithContainer;
 use Mockery;
@@ -13,6 +14,7 @@ use Exception;
 abstract class TestCase extends \think\testing\TestCase
 {
     use InteractsWithContainer;
+    use AssertJson;
 
     public function __construct($name = null, array $data = [], $dataName = '')
     {
@@ -99,5 +101,9 @@ abstract class TestCase extends \think\testing\TestCase
                 }
             }
         }
+    }
+
+    protected function getContent(){
+        return $this->response->getContent();
     }
 }
