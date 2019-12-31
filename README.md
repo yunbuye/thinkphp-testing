@@ -1,31 +1,41 @@
 # xwpd/thinkphp-testing 
-一个ThinkPHP友好的测试扩展
+一个测试友好的ThinkPHP测试扩展
 
 ## 安装
 ```bash
 composer require xwpd/thinkphp-testing --dev
 ```
+修改 phpunit.xml 文件,在 phpunit 标签加入 bootstrap="vendor/autoload.php" 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+        ...
+        bootstrap="vendor/autoload.php"
+        ...
+>
+...
+</phpunit>
+```
 ## 使用时注意
 1. 测试类必须继承 Xwpd\ThinkTesting\TestCase 测试类
-1. 如果不是使用thinkPHP命令（php think unit） 运行的测试，需要设置 $app_path 。   
+1. 如果不是使用thinkPHP命令（php think unit） 运行的测试，需要设置 $app_path 和加载基础文件。   
 例：
     ```php
     namespace Tests;
     
     use Xwpd\ThinkTesting\TestCase as BaseTestCase;
-    /**
-     * Class TestCase
-     * @package Tests
-     * @mixin \PHPUnit\Framework\TestCase
-     */
+    
     abstract class TestCase extends BaseTestCase
     {
-      /**
-       * 指定应用目录
-       * @var string 
-       */
-        protected $app_path = __DIR__ . '/../application/';
-   }
+        protected $app_path = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'application';//指定应用目录
+        protected $baseUrl = 'http://localhost';
+    
+        public function __construct($name = null, array $data = [], $dataName = '')
+        {
+            require_once __DIR__ . '/../thinkphp/base.php';//加载基础文件
+            parent::__construct($name, $data, $dataName);
+        }
+    }
     ```
    
 ## 功能
@@ -83,31 +93,19 @@ composer require xwpd/thinkphp-testing --dev
     namespace Tests;
     
     use Xwpd\ThinkTesting\TestCase as BaseTestCase;
-    use Xwpd\ThinkTesting\DatabaseTransactions;
-    /**
-     * Class TestCase
-     * @package Tests
-     * @mixin \PHPUnit\Framework\TestCase
-     */
+    use Xwpd\ThinkTesting\Traits\DatabaseTransactions;
+    
     abstract class TestCase extends BaseTestCase
     {
-      /**
-       * 指定应用目录
-       * @var string 
-       */
-        protected $app_path = __DIR__ . '/../application/';
+        use DatabaseTransactions;//每次测试回滚数据
+        protected $app_path = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'application';//指定应用目录
+        protected $baseUrl = 'http://localhost';
     
-       /**
-       * 使用数据库回滚
-       */
-        use  DatabaseTransactions;
-        /**
-        * 指定要回滚的数据库连接
-        */
-        protected $connectionsToTransact = [
-           null,//注意null值代表默认数据库，不设置则默认会回滚默认数据库
-            'mysql_1'//其他非默认数据库连接名
-        ];
+        public function __construct($name = null, array $data = [], $dataName = '')
+        {
+            require_once __DIR__ . '/../thinkphp/base.php';//加载基础文件
+            parent::__construct($name, $data, $dataName);
+        }
     }
     ```
          
@@ -116,8 +114,11 @@ composer require xwpd/thinkphp-testing --dev
     ```bash
     composer require xwpd/thinkphp-facade 
     ```
-    具体使用，请参考 xwpd/thinkphp-facade 
+    具体使用，请参考 [xwpd/thinkphp-facade](https://github.com/xwpd/thinkphp-facade)
     
 1. 模型工厂  
-modelFact
- 
+    安装扩展(加--dev) 
+    ```bash
+    composer require xwpd/thinkphp-model-factory 
+    ```
+   具体使用，请参考 [xwpd/thinkphp-model-factory](https://github.com/xwpd/thinkphp-model-factory)

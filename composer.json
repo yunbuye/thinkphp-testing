@@ -16,12 +16,13 @@
         }
     ],
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=7.1.0",
         "fzaninotto/faker": "~1.0",
         "topthink/framework": "5.1.*",
         "mockery/mockery": "^0.9.5",
         "phpunit/phpunit": "^6.0",
-        "topthink/think-testing": "2.0.*"
+        "topthink/think-testing": "2.0.*",
+        "ext-json": "*"
     },
     "require-dev": {
 
