@@ -1,6 +1,6 @@
 <?php
 
-namespace Xwpd\ThinkTesting;
+namespace Yunbuye\ThinkTesting;
 
 use think\db\Connection as BaseConnection;
 

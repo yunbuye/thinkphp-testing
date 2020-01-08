@@ -1,17 +1,17 @@
 <?php
 
 
-namespace Xwpd\ThinkTesting\Traits;
+namespace Yunbuye\ThinkTesting\Traits;
 
 
 use PHPUnit\Framework\TestCase as PHPUnit;
 use think\helper\Arr;
 use think\helper\Str;
-use Xwpd\ThinkTesting\TestCase;
+use Yunbuye\ThinkTesting\TestCase;
 
 /**
  * Trait AssertJson
- * @package Xwpd\ThinkTesting\Traits
+ * @package Yunbuye\ThinkTesting\Traits
  * @mixin TestCase
  */
 trait AssertJson

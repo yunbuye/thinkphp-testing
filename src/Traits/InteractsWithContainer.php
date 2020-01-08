@@ -1,10 +1,9 @@
 <?php
 
 
-namespace Xwpd\ThinkTesting\Traits;
+namespace Yunbuye\ThinkTesting\Traits;
 
 use think\Container;
-use think\Facade;
 use Mockery;
 use Closure;
 

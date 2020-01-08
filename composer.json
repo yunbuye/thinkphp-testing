@@ -1,5 +1,5 @@
 {
-    "name": "xwpd/thinkphp-testing",
+    "name": "yunbuye/thinkphp-testing",
     "license": "MIT",
     "description": "ThinkPHP 友好的测试扩展",
     "keywords": [
@@ -8,7 +8,7 @@
         "mockery",
         "mock"
     ],
-    "homepage": "http://github.com/xwpd/thinkphp-testing",
+    "homepage": "http://github.com/yunbuye/thinkphp-testing",
     "authors": [
         {
             "name": "xwpd",
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Xwpd\\ThinkTesting\\": "src/"
+            "Yunbuye\\ThinkTesting\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Xwpd\\ThinkTesting\\Tests\\": "tests/",
+            "Yunbuye\\ThinkTesting\\Tests\\": "tests/",
             "think\\":"vendor/topthink/framework/library/think/"
         }
     },

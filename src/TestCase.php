@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Xwpd\ThinkTesting;
+namespace Yunbuye\ThinkTesting;
 
 use think\App;
 use think\helper\Str;
-use Xwpd\ThinkTesting\Traits\AssertJson;
-use Xwpd\ThinkTesting\Traits\DatabaseTransactions;
-use Xwpd\ThinkTesting\Traits\InteractsWithContainer;
+use Yunbuye\ThinkTesting\Traits\AssertJson;
+use Yunbuye\ThinkTesting\Traits\DatabaseTransactions;
+use Yunbuye\ThinkTesting\Traits\InteractsWithContainer;
 use Mockery;
 use Exception;
 
