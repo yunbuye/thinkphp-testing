@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Xwpd\ThinkTesting\Tests;
+namespace Yunbuye\ThinkTesting\Tests;
 
 
 use think\facade\Cache;
 use think\facade\Config;
 use think\helper\Str;
-use Xwpd\ThinkTesting\TestCase;
+use Yunbuye\ThinkTesting\TestCase;
 use \Mockery\Mock;
 
 class FacadeTest extends TestCase

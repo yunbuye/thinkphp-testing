@@ -1,9 +1,9 @@
-# xwpd/thinkphp-testing 
+# yunbuye/thinkphp-testing 
 一个测试友好的ThinkPHP测试扩展
 
 ## 安装
 ```bash
-composer require xwpd/thinkphp-testing --dev
+composer require yunbuye/thinkphp-testing --dev
 ```
 修改 phpunit.xml 文件,在 phpunit 标签加入 bootstrap="vendor/autoload.php" 
 ```xml
@@ -17,13 +17,13 @@ composer require xwpd/thinkphp-testing --dev
 </phpunit>
 ```
 ## 使用时注意
-1. 测试类必须继承 Xwpd\ThinkTesting\TestCase 测试类
+1. 测试类必须继承 Yunbuye\ThinkTesting\TestCase 测试类
 1. 如果不是使用thinkPHP命令（php think unit） 运行的测试，需要设置 $app_path 和加载基础文件。   
 例：
     ```php
     namespace Tests;
     
-    use Xwpd\ThinkTesting\TestCase as BaseTestCase;
+    use Yunbuye\ThinkTesting\TestCase as BaseTestCase;
     
     abstract class TestCase extends BaseTestCase
     {
@@ -92,8 +92,8 @@ composer require xwpd/thinkphp-testing --dev
     ```php
     namespace Tests;
     
-    use Xwpd\ThinkTesting\TestCase as BaseTestCase;
-    use Xwpd\ThinkTesting\Traits\DatabaseTransactions;
+    use Yunbuye\ThinkTesting\TestCase as BaseTestCase;
+    use Yunbuye\ThinkTesting\Traits\DatabaseTransactions;
     
     abstract class TestCase extends BaseTestCase
     {
@@ -112,13 +112,13 @@ composer require xwpd/thinkphp-testing --dev
 1. Facade mock 模拟  
     安装扩展(不要加--dev) 
     ```bash
-    composer require xwpd/thinkphp-facade 
+    composer require yunbuye/thinkphp-facade 
     ```
-    具体使用，请参考 [xwpd/thinkphp-facade](https://github.com/xwpd/thinkphp-facade)
+    具体使用，请参考 [yunbuye/thinkphp-facade](https://github.com/yunbuye/thinkphp-facade)
     
 1. 模型工厂  
     安装扩展(加--dev) 
     ```bash
-    composer require xwpd/thinkphp-model-factory 
+    composer require yunbuye/thinkphp-model-factory 
     ```
-   具体使用，请参考 [xwpd/thinkphp-model-factory](https://github.com/xwpd/thinkphp-model-factory)
+   具体使用，请参考 [yunbuye/thinkphp-model-factory](https://github.com/yunbuye/thinkphp-model-factory)

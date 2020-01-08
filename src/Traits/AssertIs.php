@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Xwpd\ThinkTesting\Traits;
+namespace Yunbuye\ThinkTesting\Traits;
 
 
 use PHPUnit\Framework\Constraint\IsType;

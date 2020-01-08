@@ -1,6 +1,6 @@
 <?php
 
-namespace Xwpd\ThinkTesting\Traits;
+namespace Yunbuye\ThinkTesting\Traits;
 
 use think\Db;
 use think\db\Connection;
